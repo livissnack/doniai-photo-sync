@@ -3,7 +3,8 @@
   "description": "照片同步工具",
   "type": "project",
   "require": {
-    "manaphp/framework": "dev-master"
+    "manaphp/framework": "dev-master",
+    "johnlui/aliyun-oss": "^2.2"
   },
   "license": "MIT",
   "authors": [

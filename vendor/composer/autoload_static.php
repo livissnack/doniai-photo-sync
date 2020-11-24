@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitf51c26eb39e470a151f99dc0c3c1beaa
 {
+    public static $files = array (
+        '4378f255c67b62a024d3295602369ebf' => __DIR__ . '/..' . '/johnlui/aliyun-oss/src/AliyunOSS.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
@@ -28,11 +32,16 @@ class ComposerStaticInitf51c26eb39e470a151f99dc0c3c1beaa
         ),
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf51c26eb39e470a151f99dc0c3c1beaa::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf51c26eb39e470a151f99dc0c3c1beaa::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitf51c26eb39e470a151f99dc0c3c1beaa::$classMap;
 
         }, null, ClassLoader::class);
     }
