@@ -66,7 +66,7 @@ class SyncPhotoController extends Controller
         $target = http_download($img_url);
         $ext_name = pathinfo($target, PATHINFO_EXTENSION);
 
-        $bucket_name = env('ali_oss_bucket_name');
+        $bucket_name = env('ALI_OSS_BUCKET_NAME');
         $content_type = 'image/' . $ext_name;
         $filename = $this->_uuid() . '.' . $ext_name;
         AliyunOssService::publicUpload($bucket_name, $filename, $target, ['ContentType' => $content_type]);
